@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPL - Fundos Imobiliários</title>
+
+    <!-- Importando a fonte Inter do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3976/3976419.png" type="image/jpeg">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+
+<body >
+    <div id="overlay" class="hidden"></div>
+    <!-- Container Modal Centralizado -->
+    <div class="modal-container" ">
+        <!-- Título -->
+        <h2>Sistema de Previsão de Lucro FII </h2>
+
+        <!-- Formulário -->
+        <form id="formulario">
+            <div class="input-group">
+            <label for="codigoFii">Código do fundo imobiliário:</label>
+            <input class="validar" id="codigoFii" placeholder="Ex: HGLG11" type="text" autocomplete="off"
+                oninput="ativarUpperCase('codigoFii')">
+            </div>
+            <div class="form-title">
+                <h3>Dados para o cálculo</h3>
+                <span>(Escolha um dos campos como parâmetro)</span>
+            </div>
+
+            <!-- Formulário centralizado -->
+            <div class="input-group">
+                <label for="quantidadeCotas">Quantidade de cotas</label>
+                <input class="validar" type="number" id="quantidadeCotas" placeholder="Ex: 50"
+                    oninput="verificarCampoCalculo()">
+            </div>
+
+            <div class="input-group">
+                <label for="retornoMensal">Retorno mensal desejado</label>
+                <input type="text" id="retornoMensal" placeholder="Ex: R$ 200,00" autocomplete="off"
+                    oninput="formatarValorMonetario('retornoMensal'); verificarCampoCalculo()">
+            </div>
+
+            <div class="input-group">
+                <label for="totalInvestido">Valor para investir</label>
+                <input class="validar" type="text" id="totalInvestido" autocomplete="off" placeholder="Ex: R$ 10.000,00"
+                    oninput="formatarValorMonetario('totalInvestido'); verificarCampoCalculo()">
+            </div>
+
+
+
+            <button type="submit">Calcular</button>
+           
+        </form>
+
+        <!-- Container Resultados -->
+       
+        <div id="resultados-container" class="hidden">
+           
+            <h3>Resultados</h3>
+            <label>Valor atual do fundo:</label>
+            <span id="valor-atual-fundo">R$ 0,00</span>
+
+            <label>Último dividendo pago (valor por cota):</label>
+            <span id="ultimo-dividendo-pago">R$ 0,00</span>
+
+            <label>Valor total investido:</label>
+            <span id="valor-investido">R$ 0,00</span>
+
+            <label>Quantidade de cotas:</label>
+            <span id="quantidade-cotas">0</span>
+
+            <label>Retorno mensal:</label>
+            <span id="retorno-mensal">R$ 0,00</span>
+
+            <br>
+            <button id="close-modal" onclick="fecharModal()">Fechar</button>
+    </div>
+    </div>
+
+    <footer>
+        <p>Desenvolvido por <strong>Davi Braz</strong> &copy; 2024</p>
+    </footer>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+ 
+</body>
+
+</html>
