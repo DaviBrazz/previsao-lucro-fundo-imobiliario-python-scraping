@@ -20,7 +20,7 @@ formulario.addEventListener("submit", async (e) => {
     }
 
     try {
-        const resposta = await fetch(`http://127.0.0.1:5000/dados-fii/${codigoFii}`);
+        const resposta = await fetch(`http://127.0.0.1:5050/dados-fii/${codigoFii}`);
         const dados = await resposta.json();
 
         if (dados.preco == 'Preço não encontrado' && dados.dividendo == 'Dividendo não encontrado') {
