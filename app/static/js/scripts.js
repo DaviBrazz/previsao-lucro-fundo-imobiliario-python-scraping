@@ -98,7 +98,6 @@ formulario.addEventListener("submit", async (e) => {
             })
         });
 
-
         if (!resposta.ok) {
             const err = await resposta.json().catch(() => ({}));
             alert(err?.erro || 'Erro ao buscar os dados.');
