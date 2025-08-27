@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  previsao-fii:
+    build: .
+    container_name: previsao-fii
+    ports:
+      - "5050:5050"
+    restart: unless-stopped
