@@ -290,17 +290,35 @@ body {
     opacity: 1;
 }
 
-/* Botão de Fechar */
-#close-modal {
+/* Botão de Imprimir */
+#imprimir-modal {
     margin-top: 15px;
-    padding: 10px;
-    background-color: #ff6347;
+    margin-right: 10px;
+    padding: 10px 15px;
+    background-color: #28a745; /* verde */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    float: left;
+}
+
+#imprimir-modal:hover {
+    background-color: #218838;
+}
+
+/* Botão Fechar */
+#close-modal {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
 }
 
 #close-modal:hover {
-    background-color: #d9534f;
+    background-color: #5a6268;
 }

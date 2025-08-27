@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPL - Fundos Imobiliários</title>
+    <title>SPL FII - Fundos Imobiliários</title>
 
     <!-- Importando a fonte Inter do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3976/3976419.png" type="image/jpeg">
+    <link rel="icon" href="{{ url_for('static', filename='img/icon.png') }}" type="image/png">
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 
 </head>
@@ -60,35 +61,35 @@
 
         <!-- Container Resultados -->
        
-        <div id="resultados-container" class="hidden">
-           
-            <h3>Resultados</h3>
-            <label>Valor atual do fundo:</label>
-            <span id="valor-atual-fundo">R$ 0,00</span>
+      <div id="resultados-container" class="hidden">
+    <h3>Resultados</h3>
+    <label>Valor atual do fundo:</label>
+    <span id="valor-atual-fundo">R$ 0,00</span>
 
-            <label>Último dividendo pago (valor por cota):</label>
-            <span id="ultimo-dividendo-pago">R$ 0,00</span>
+    <label>Último dividendo pago (valor por cota):</label>
+    <span id="ultimo-dividendo-pago">R$ 0,00</span>
 
-            <label>Valor total investido:</label>
-            <span id="valor-investido">R$ 0,00</span>
+    <label>Valor total investido:</label>
+    <span id="valor-investido">R$ 0,00</span>
 
-            <label>Quantidade de cotas:</label>
-            <span id="quantidade-cotas">0</span>
+    <label>Quantidade de cotas:</label>
+    <span id="quantidade-cotas">0</span>
 
-            <label>Retorno mensal:</label>
-            <span id="retorno-mensal">R$ 0,00</span>
+    <label>Retorno mensal:</label>
+    <span id="retorno-mensal">R$ 0,00</span>
 
-            <br>
-            <button id="close-modal" onclick="fecharModal()">Fechar</button>
+    <br>
+    <button id="imprimir-modal" type="button">Baixar Relatório</button>
+    <button id="close-modal" onclick="fecharModal()">Fechar</button>
+</div>
+
     </div>
-    </div>
-
-    <footer>
-        <p>Desenvolvido por <strong>Davi Braz</strong> &copy; 2024</p>
-    </footer>
 
     <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script>
- 
+ <!-- jsPDF e AutoTable -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+
 </body>
 
 </html>
