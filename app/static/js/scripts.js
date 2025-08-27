@@ -87,7 +87,7 @@ formulario.addEventListener("submit", async (e) => {
     }
 
     try {
-        const resposta = await fetch('http://localhost:5050/dados', {
+        const resposta = await fetch('https://previsao-fundos-imobiliarios.onrender.com/dados', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -155,18 +155,20 @@ document.getElementById("imprimir-modal").addEventListener("click", () => {
     doc.save(`Relatorio_FII_${document.getElementById("codigoFii").value.toUpperCase()}.pdf`);
 });
 
-(function(){
-    var _0x1a2b=["\x66\x6F\x6F\x74\x65\x72","\x71\x75\x65\x72\x79\x53\x65\x6C\x65\x63\x74\x6F\x72","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6D\x65\x6E\x74","\x73\x74\x79\x6C\x65\x43\x73\x73\x54\x65\x78\x74","\x62\x6F\x64\x79","\x61\x70\x70\x65\x6E\x64\x43\x68\x69\x6C\x64","\x68\x65\x61\x64","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x73\x74\x79\x6C\x65\x43\x73\x73\x54\x65\x78\x74","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x63\x68\x69\x6C\x64\x52\x65\x6D\x6F\x76\x65\x64\x4E\x6F\x64\x65\x73","\x74\x61\x67\x4E\x61\x6D\x65","\x63\x6F\x6E\x73\x6F\x6C\x65\x2E\x77\x61\x72\x6E","\x46\x6F\x6F\x74\x65\x72\x20\x72\x65\x6D\x6F\x76\x69\x64\x6F\x21\x20\x52\x65\x69\x6E\x73\x65\x72\x69\x6E\x64\x6F\x2E\x2E\x2E"];
-    function _0x2f3c(){if(!document[_0x1a2b[1]](_0x1a2b[0])){
-        var _0xabc=document[_0x1a2b[2]](_0x1a2b[0]);
-        _0xabc[_0x1a2b[7]]=`<a href="https://www.linkedin.com/in/davi-braz-8bb09a357/" target="_blank" style="text-decoration:none;"><span class="ftxt">Desenvolvido por</span><span class="fname"> Davi Braz</span><span class="ftxt"> &copy; 2024</span></a>`;
-        _0xabc[_0x1a2b[3]]="text-align:center;padding:10px 0;font-size:14px;position:fixed;bottom:0;left:0;width:100%;background-color:#1c1c3b;z-index:1000;";
-        document[_0x1a2b[4]][_0x1a2b[5]](_0xabc);
-        var _0xdef=document[_0x1a2b[2]]("style");
-        _0xdef[_0x1a2b[7]]=".ftxt{color:#fff;transition:color .3s}.fname{color:#3cb0ff;font-weight:bold;transition:color .3s}footer a:hover .ftxt{color:#ddd}footer a:hover .fname{color:#7fd1ff}footer a{cursor:pointer}";
-        document[_0x1a2b[6]][_0x1a2b[5]](_0xdef);
-    }}
-    function _0x4d5e(){new MutationObserver(function(_0x9f){_0x9f.forEach(function(_0x7a){_0x7a[_0x1a2b[10]][_0x1a2b[11]].forEach(function(_0x6b){_0x6b[_0x1a2b[12]]===_0x1a2b[0]&&(console[_0x1a2b[13]](_0x1a2b[14]),_0x2f3c())})})}).observe(document[_0x1a2b[4]],{childList:true,subtree:true})}
-    _0x2f3c(),_0x4d5e();
+(function () {
+    var _0x1a2b = ["\x66\x6F\x6F\x74\x65\x72", "\x71\x75\x65\x72\x79\x53\x65\x6C\x65\x63\x74\x6F\x72", "\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6D\x65\x6E\x74", "\x73\x74\x79\x6C\x65\x43\x73\x73\x54\x65\x78\x74", "\x62\x6F\x64\x79", "\x61\x70\x70\x65\x6E\x64\x43\x68\x69\x6C\x64", "\x68\x65\x61\x64", "\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C", "\x73\x74\x79\x6C\x65\x43\x73\x73\x54\x65\x78\x74", "\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72", "\x63\x68\x69\x6C\x64\x52\x65\x6D\x6F\x76\x65\x64\x4E\x6F\x64\x65\x73", "\x74\x61\x67\x4E\x61\x6D\x65", "\x63\x6F\x6E\x73\x6F\x6C\x65\x2E\x77\x61\x72\x6E", "\x46\x6F\x6F\x74\x65\x72\x20\x72\x65\x6D\x6F\x76\x69\x64\x6F\x21\x20\x52\x65\x69\x6E\x73\x65\x72\x69\x6E\x64\x6F\x2E\x2E\x2E"];
+    function _0x2f3c() {
+        if (!document[_0x1a2b[1]](_0x1a2b[0])) {
+            var _0xabc = document[_0x1a2b[2]](_0x1a2b[0]);
+            _0xabc[_0x1a2b[7]] = `<a href="https://www.linkedin.com/in/davi-braz-8bb09a357/" target="_blank" style="text-decoration:none;"><span class="ftxt">Desenvolvido por</span><span class="fname"> Davi Braz</span><span class="ftxt"> &copy; 2024</span></a>`;
+            _0xabc[_0x1a2b[3]] = "text-align:center;padding:10px 0;font-size:14px;position:fixed;bottom:0;left:0;width:100%;background-color:#1c1c3b;z-index:1000;";
+            document[_0x1a2b[4]][_0x1a2b[5]](_0xabc);
+            var _0xdef = document[_0x1a2b[2]]("style");
+            _0xdef[_0x1a2b[7]] = ".ftxt{color:#fff;transition:color .3s}.fname{color:#3cb0ff;font-weight:bold;transition:color .3s}footer a:hover .ftxt{color:#ddd}footer a:hover .fname{color:#7fd1ff}footer a{cursor:pointer}";
+            document[_0x1a2b[6]][_0x1a2b[5]](_0xdef);
+        }
+    }
+    function _0x4d5e() { new MutationObserver(function (_0x9f) { _0x9f.forEach(function (_0x7a) { _0x7a[_0x1a2b[10]][_0x1a2b[11]].forEach(function (_0x6b) { _0x6b[_0x1a2b[12]] === _0x1a2b[0] && (console[_0x1a2b[13]](_0x1a2b[14]), _0x2f3c()) }) }) }).observe(document[_0x1a2b[4]], { childList: true, subtree: true }) }
+    _0x2f3c(), _0x4d5e();
 })();
 
